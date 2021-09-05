@@ -1,0 +1,19 @@
+<div class="expandable-report">
+  <div class="expandable-report__overview">
+    <button type="button" class="expandable-report__expand-button"
+            [class.expandable-report__expand-button--expanded]="!isCollapsed"
+            [attr.aria-controls]="contentId"
+            (click)="toggleCollapse()">
+      <img src="assets/images/icons/arrow-right-icon.svg" alt="Toggle content">
+    </button>
+
+    <div>
+      <h4 class="heading-4">{{ title }}</h4>
+      <div class="subtext">{{ description }}</div>
+    </div>
+  </div>
+
+  <div class="expandable-report__content copy" [id]="contentId" [collapse]="isCollapsed" [isAnimated]="true">
+    <p *ngFor="let paragraph of content">{{ paragraph }}</p>
+  </div>
+</div>

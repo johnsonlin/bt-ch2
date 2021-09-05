@@ -1,0 +1,17 @@
+<div class="report-pack" [class.report-pack--selected]="packSelected" (click)="selectPack()">
+  <div class="report-pack__front">
+    <div class="report-pack__front-title-container">
+      <div class="report-pack__front-title">{{ title }}</div>
+    </div>
+    <div class="report-pack__front-description subtext">{{ description }}</div>
+  </div>
+
+  <div class="report-pack__back">
+    <div class="report-pack__back-title">{{ title }}</div>
+    <span class="subtext">selected</span>
+    <button class="report-pack__close-button bt-button bt-button--toolbar" (click)="deselectPack($event)">
+      <img src="assets/images/icons/close-icon.svg" alt="" class="bt-button__icon">
+      Close pack
+    </button>
+  </div>
+</div>

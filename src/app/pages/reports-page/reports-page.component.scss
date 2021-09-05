@@ -1,0 +1,94 @@
+@import '../../../scss/mixins';
+@import '../../../scss/colors';
+@import '../../../scss/variables';
+
+.reports {
+  &__summary {
+    background: $brand-blue;
+    color: white;
+    padding: 10px 20px;
+
+    @include desktopView {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+    }
+  }
+
+  &__client-number {
+    @include separator();
+  }
+
+  &__value-number {
+    font-family: 'Roboto Condensed', $font-family;
+    font-size: 18px;
+    margin-left: 20px;
+  }
+
+  &__content {
+    padding: 20px 30px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    display: flex;
+  }
+
+  &__filter {
+    padding: 30px;
+    border: 1px solid $border-color;
+    margin-bottom: 20px;
+
+    @include desktopView {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__individual-reports,
+  &__packs {
+    border: 1px solid $border-color;
+    background: white;
+    padding: 30px;
+    border-radius: 3px;
+  }
+
+  &__pack-list {
+    @include resetList();
+    margin-bottom: 20px;
+
+    @include desktopView {
+      display: flex;
+    }
+  }
+
+  &__pack-list-item {
+    padding-right: 20px;
+
+    @include mobileView {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__table {
+    margin-bottom: 20px;
+  }
+
+  &__result {
+    margin-bottom: 20px;
+  }
+
+  &__individual-reports {
+    margin-bottom: 20px;
+  }
+
+  &__report-list {
+    @include resetList();
+  }
+}

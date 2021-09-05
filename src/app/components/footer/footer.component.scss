@@ -1,0 +1,41 @@
+@import '../../../scss/colors';
+@import '../../../scss/mixins';
+
+.footer {
+  margin: 0 30px;
+  padding: 20px 0;
+  border-top: 1px solid $border-color;
+
+  @include desktopView {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+  }
+
+  &__powered-by {
+    @include mobileView {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__side-content {
+    @include desktopView {
+      display: flex;
+    }
+  }
+
+  &__quick-links {
+    @include resetList();
+    @include desktopView {
+      display: flex;
+    }
+  }
+
+  &__link {
+    color: $copy-color;
+    @include desktopView {
+      @include separator();
+    }
+  }
+}

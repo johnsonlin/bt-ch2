@@ -1,0 +1,38 @@
+@import 'colors';
+@import 'extends';
+@import 'variables';
+
+body {
+  // Open Sans is an alternative to Helvetica Neue https://www.psd2html.com/blog/web-font-alternatives.html
+  // as a commercial license cannot be provided in this project
+  font-family: $font-family;
+  color: $copy-color;
+}
+
+.heading-1 {
+  @extend %heading-1;
+}
+
+.heading-2 {
+  @extend %heading-2;
+}
+
+.heading-3 {
+  @extend %heading-3;
+}
+
+.heading-4 {
+  @extend %heading-4;
+}
+
+.label {
+  @extend %label;
+}
+
+.copy {
+  @extend %copy;
+}
+
+.subtext {
+  @extend %subtext;
+}

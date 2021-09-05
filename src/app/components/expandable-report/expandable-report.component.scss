@@ -1,0 +1,26 @@
+@import '../../../scss/colors';
+
+.expandable-report {
+  &__overview {
+    display: flex;
+    align-items: center;
+  }
+
+  &__expand-button {
+    display: flex;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    transition: transform ease 300ms;
+
+    &--expanded {
+      transform: rotateZ(90deg);
+      border-color: $copy-color;
+    }
+  }
+}

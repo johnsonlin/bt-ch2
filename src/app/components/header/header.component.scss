@@ -1,0 +1,28 @@
+@import '../../../scss/colors';
+@import '../../../scss/mixins';
+
+.header {
+  padding: 10px 15px;
+
+  @include desktopView {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: 50px;
+  }
+
+  &__logo {
+    line-height: 0;
+  }
+
+  &__user {
+    padding-top: 10px;
+
+    @include desktopView {
+      padding: 10px 0 10px 20px;
+      border-left: 1px solid $border-color;
+      width: 295px;
+    }
+  }
+}

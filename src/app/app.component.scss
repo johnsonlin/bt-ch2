@@ -1,0 +1,35 @@
+@import '../scss/colors';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  flex-shrink: 0;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+}
+
+.side-nav {
+  display: flex;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content {
+  flex-grow: 1;
+  background: $content-background;
+}
+
+.footer {
+  background: $content-background;
+}

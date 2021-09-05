@@ -1,0 +1,29 @@
+@import '../../../scss/colors';
+@import '../../../scss/mixins';
+
+:host {
+  height: 100%;
+  background: linear-gradient(to bottom, #00232b, #786c82);
+}
+
+.side-nav {
+  &__menu {
+    @include resetList();
+  }
+
+  &__menu-link {
+    display: block;
+    padding: 12px 12px 8px 12px;
+    border-left: 5px solid transparent;
+    line-height: 0;
+
+    &--active {
+      border-left-color: $link-color;
+      color: $link-color;
+
+      & .side-nav__link-image {
+        fill: currentColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+<div class="reports">
+  <div class="reports__summary">
+    <div class="reports__client subtext">
+      <div class="reports__client-name copy">Beechams Investment Wrap</div>
+      <span class="reports__client-number">123456789</span>Individual
+    </div>
+
+    <div class="reports__value subtext">
+      Portfolio value as of today
+      <span class="reports__value-number">$416,400.00</span>
+    </div>
+  </div>
+
+  <div class="reports__content">
+    <div class="reports__header">
+      <div class="reports__title">
+        <button>
+          <img src="assets/images/icons/hamburger-icon.svg" alt="Menu">
+        </button>
+        <h1 class="heading-2">Reports</h1>
+      </div>
+
+      <select>
+        <option>I would like to ...</option>
+      </select>
+    </div>
+
+    <div class="reports__filter">
+      <label class="heading-3">Quick preference</label>
+
+      <select>
+        <option>Last 12 months</option>
+      </select>
+
+      <bt-date-range-field></bt-date-range-field>
+
+      <bt-button-group></bt-button-group>
+    </div>
+
+    <div class="reports__result">
+      <div class="reports__packs">
+        <h2 class="heading-2">Report packs</h2>
+
+        <ul class="reports__pack-list">
+          <li class="reports__pack-list-item">
+            <bt-report-pack title="Summary pack"
+                            description="Portfolio valuation, Asset allocation, Account performance and Portfolio performance"
+                            [packSelected]="selectedPack === 1"
+                            (packSelect)="setSelectedPack(1)" (packDeselect)="resetSelectedPack()"></bt-report-pack>
+          </li>
+          <li class="reports__pack-list-item">
+            <bt-report-pack title="Tax pack"
+                            description="Portfolio valuation, Asset allocation, Account performance and Portfolio performance"
+                            [packSelected]="selectedPack === 2"
+                            (packSelect)="setSelectedPack(2)" (packDeselect)="resetSelectedPack()"></bt-report-pack>
+          </li>
+          <li class="reports__pack-list-item">
+            <bt-report-pack title="Really long name pack"
+                            description="Portfolio valuation, Asset allocation, Account performance and Portfolio performance"
+                            [packSelected]="selectedPack === 3"
+                            (packSelect)="setSelectedPack(3)" (packDeselect)="resetSelectedPack()"></bt-report-pack>
+          </li>
+          <li class="reports__pack-list-item">
+            <bt-report-pack title="This is an extremely long name pack"
+                            description="Portfolio valuation, Asset allocation, Account performance and Portfolio performance"
+                            [packSelected]="selectedPack === 4"
+                            (packSelect)="setSelectedPack(4)" (packDeselect)="resetSelectedPack()"></bt-report-pack>
+          </li>
+        </ul>
+
+        <div *ngIf="selectedPack > 0">
+          <bt-report-table class="reports__table"></bt-report-table>
+
+          <p>
+            <button class="bt-button bt-button--primary">Download</button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reports__individual-reports">
+      <h2 class="heading-2">Individual reports</h2>
+
+      <ul class="reports__report-list">
+        <li>
+          <bt-expandable-report title="Portfolio reports"
+                                description="Portfolio valuation, Asset allocation, Account performance, Portfolio performance, Portfolio, Portfolio movement & Transaction history cash statement"></bt-expandable-report>
+        </li>
+        <li>
+          <bt-expandable-report title="Income reports"
+                                description="Income received, Income accrued, Realised capital gains tax & Unrealised capital gains tax"></bt-expandable-report>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

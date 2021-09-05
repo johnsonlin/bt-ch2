@@ -1,0 +1,28 @@
+@import '../../../scss/colors';
+@import '../../../scss/mixins';
+
+.user-tool {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__summary {
+    padding-right: 20px;
+    font-size: 12px;
+    color: $copy-color;
+  }
+
+  &__adviser-name {
+    font-weight: bold;
+    color: $brand-blue;
+  }
+
+  &__title {
+    @include separator();
+  }
+
+  &__settings-button {
+    border: none;
+    background: transparent;
+  }
+}

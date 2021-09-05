@@ -1,0 +1,24 @@
+@import '../colors';
+@import '../extends';
+
+.bt-button {
+  @extend %label;
+  background: transparent;
+  border: none;
+  padding: 23px 40px;
+  border-radius: 3px;
+
+  &--primary {
+    background: $brand-blue;
+    color: white;
+  }
+
+  &--toolbar {
+    border: 1px solid $border-color;
+    padding: 13px 15px;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}

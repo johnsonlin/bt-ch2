@@ -1,0 +1,53 @@
+<div class="side-nav">
+  <nav>
+    <ul class="side-nav__menu">
+      <li class="side-nav__menu-item">
+        <a routerLink="/home" class="side-nav__menu-link" routerLinkActive="side-nav__menu-link--active"
+           #home="routerLinkActive">
+          <img class="side-nav__link-image" alt="Home"
+               [src]="'assets/images/icons/home-icon' + (home.isActive ? '--active' : '') + '.svg'">
+        </a>
+      </li>
+
+      <li class="side-nav__menu-item">
+        <a routerLink="/reports" class="side-nav__menu-link" routerLinkActive="side-nav__menu-link--active"
+           #reports="routerLinkActive">
+          <img class="side-nav__link-image" alt="Reports"
+               [src]="'assets/images/icons/client-icon' + (reports.isActive ? '--active' : '') + '.svg'">
+        </a>
+      </li>
+
+      <li class="side-nav__menu-item">
+        <a routerLink="/tracking" class="side-nav__menu-link" routerLinkActive="side-nav__menu-link--active"
+           #tracking="routerLinkActive">
+          <img class="side-nav__link-image" alt="Tracking"
+               [src]="'assets/images/icons/tracking-icon' + (tracking.isActive ? '--active' : '') + '.svg'">
+        </a>
+      </li>
+
+      <li class="side-nav__menu-item">
+        <a routerLink="/business" class="side-nav__menu-link" routerLinkActive="side-nav__menu-link--active"
+           #business="routerLinkActive">
+          <img class="side-nav__link-image" alt="Business"
+               [src]="'assets/images/icons/business-icon' + (business.isActive ? '--active' : '') + '.svg'">
+        </a>
+      </li>
+
+      <li class="side-nav__menu-item">
+        <a routerLink="/investments" class="side-nav__menu-link" routerLinkActive="side-nav__menu-link--active"
+           #investments="routerLinkActive">
+          <img class="side-nav__link-image" alt="Investments"
+               [src]="'assets/images/icons/investments-icon' + (investments.isActive ? '--active' : '') + '.svg'">
+        </a>
+      </li>
+
+      <li class="side-nav__menu-item">
+        <a routerLink="/analytics" class="side-nav__menu-link" routerLinkActive="side-nav__menu-link--active"
+           #analytics="routerLinkActive">
+          <img class="side-nav__link-image" alt="Analytics"
+               [src]="'assets/images/icons/analytics-icon' + (analytics.isActive ? '--active' : '') + '.svg'">
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
